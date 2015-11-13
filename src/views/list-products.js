@@ -15,13 +15,13 @@ var ListProducts = Backbone.View.extend({
 
   render: function () {
     var _this = this;
-    var userCollection = this.collection;
+    var productCollection = this.collection;
 
     //Fetch Collection from Server
-    userCollection.fetch().done(function (products) {
+    productCollection.fetch().done(function (products) {
       _this.$el.html(listProductsTemplate(products));
     });
   }
 });
 
-module.exports = ProductsUsers;
+module.exports = ListProducts;
