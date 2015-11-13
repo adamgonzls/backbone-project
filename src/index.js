@@ -3,14 +3,19 @@ var Backbone = require('backbone');
 // App
 var App = require('./app');
 var userCollection = require('./collections/user');
+var productCollection = require('./collections/product');
 
 // View: User Form
 var UserFormView = require('./views/user-form');
 App.Views.UserForm = new UserFormView;
+var ProductFormView = require('./views/product-form');
+App.Views.ProductForm = new ProductFormView;
 
 // View: List Users
 var ListUsersView = require('./views/list-users');
 App.Views.ListUsers  = new ListUsersView;
+var ListProductsView = require('./views/list-products');
+App.Views.ListProduct  = new ListProductsView;
 
 // App Router
 App.Router = Backbone.Router.extend({
@@ -21,8 +26,8 @@ App.Router = Backbone.Router.extend({
     'user/add(/)': 'addUser',
     'user/:id/edit(/)': 'addUser',
     'user/:id/delete(/)': 'deleteUser',
-    'products(/)': 'myProducts',
-    'products/add(/)': 'addProduct',
+    'product(/)': 'myProducts',
+    'product/add(/)': 'addProduct',
     '*actions': 'defaultRoute'
   },
 
@@ -32,6 +37,7 @@ App.Router = Backbone.Router.extend({
   },
 
   addProduct: function () {
+    App.Views.ListProducts.render();
     console.log('adding projects')
   },
 
