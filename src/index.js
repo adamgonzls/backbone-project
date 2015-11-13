@@ -35,12 +35,10 @@ App.Router = Backbone.Router.extend({
   // Route handlers
   myProducts: function () {
     App.Views.ListProducts.render();
-    console.log('products')
   },
 
   addProduct: function () {
     App.Views.ProductForm.render();
-    console.log('adding projects')
   },
 
   index: function() {
