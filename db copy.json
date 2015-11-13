@@ -12,5 +12,17 @@
       "hobby": "Beard Growing",
       "img": "http://robohash.org/14eb93afa4d.png"
     }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "userId" : 1,
+      "type" : "robotic hand"
+    },
+    {
+      "id": 2,
+      "userId" : 2,
+      "type" : "Bionic Beard"
+    }
   ]
 }
