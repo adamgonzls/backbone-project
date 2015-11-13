@@ -15,7 +15,7 @@ App.Views.ProductForm = new ProductFormView;
 var ListUsersView = require('./views/list-users');
 App.Views.ListUsers  = new ListUsersView;
 var ListProductsView = require('./views/list-products');
-App.Views.ListProduct  = new ListProductsView;
+App.Views.ListProducts  = new ListProductsView;
 
 // App Router
 App.Router = Backbone.Router.extend({
@@ -33,11 +33,12 @@ App.Router = Backbone.Router.extend({
 
   // Route handlers
   myProducts: function () {
+    App.Views.ListProducts.render();
     console.log('products')
   },
 
   addProduct: function () {
-
+    App.Views.ProductForm.render();
     console.log('adding projects')
   },
 
