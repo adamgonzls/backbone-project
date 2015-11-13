@@ -1,4 +1,5 @@
-# BackboneJS User CRUD
+I'M MAKING THESE CHANGES!!!!!
+
 
 This project will get you familiar with CRUD and MVC. CRUD stands for Create, Retrieve, Update, and Delete. Every "entity" in an information system is usually subject to these four processes. This project already has a full user CRUD built in. In other words, all the code for creating, retrieving, updating, and deleting users is already done. This will allow you to learn by example -one of the best ways to learn new frameworks.
 
