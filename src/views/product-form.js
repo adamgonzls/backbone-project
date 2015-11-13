@@ -45,8 +45,12 @@ var ProductFormView = Backbone.View.extend({
   submitForm: function () {
     // Collect Form Data
     var formData = {
-      name: $('form.product input[name="name"]').val(),
-      
+      //use id's on the inputs instead of this way:
+      id: $('#prodId').val(),
+      type: $('#prodType').val(),
+      //id: $('form.product input[id="id"]').val(),
+      //type: $('form.product input[type="text"]').val(),
+
     };
 
     // Add Mode (Create User)
