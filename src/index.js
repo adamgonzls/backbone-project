@@ -26,6 +26,7 @@ App.Router = Backbone.Router.extend({
     'user/add(/)': 'addUser',
     'user/:id/edit(/)': 'addUser',
     'user/:id/delete(/)': 'deleteUser',
+    'product/:id/delete(/)': 'deleteProduct',
     'product(/)': 'myProducts',
     'product/add(/)': 'addProduct',
     '*actions': 'defaultRoute'
@@ -60,6 +61,14 @@ App.Router = Backbone.Router.extend({
 
   defaultRoute: function(actions) {
     console.log('404');
+  },
+
+  deleteProduct: function(id) {
+    var product = productCollection.get(id);
+
+    product.destroy().done(function (product) {
+      App.router.navigate('/', { trigger: true })
+  });
   }
 });
 
