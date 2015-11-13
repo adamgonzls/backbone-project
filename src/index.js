@@ -21,10 +21,19 @@ App.Router = Backbone.Router.extend({
     'user/add(/)': 'addUser',
     'user/:id/edit(/)': 'addUser',
     'user/:id/delete(/)': 'deleteUser',
+    'products(/)': 'myProducts',
+    'products/add(/)': 'addProduct',
     '*actions': 'defaultRoute'
   },
 
   // Route handlers
+  myProducts: function () {
+    console.log('products')
+  },
+
+  addProduct: function () {
+    console.log('adding projects')
+  },
 
   index: function() {
     App.Views.ListUsers.render();
