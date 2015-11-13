@@ -37,7 +37,7 @@ App.Router = Backbone.Router.extend({
   },
 
   addProduct: function () {
-    App.Views.ListProducts.render();
+
     console.log('adding projects')
   },
 
